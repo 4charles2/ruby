@@ -12,3 +12,7 @@ end
 10.times do
 	puts "hello"
 end
+
+10.times do |i|
+	puts "hello #{i}"
+end
