@@ -8,3 +8,7 @@ utilisateurs.each do |utilisateur|
 	i = i + 1
 	puts utilisateur
 end
+
+10.times do
+	puts "hello"
+end
