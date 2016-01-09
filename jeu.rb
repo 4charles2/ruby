@@ -6,16 +6,19 @@ class Personne
     @points_de_vie = 100
     @en_vie = true
   end
-charles = Personne.new
-charles.nom = "charles"
-puts "#{charles.nom}"
-  def info
+
+  def info # informe si le joueur est encore en vie
     # A faire:
+    if points_de_vie > 0
+    puts "#{nom} #{points_de_vie}"
     # - Renvoie le nom et les points de vie si la personne est en vie
+    else
+      puts "#{nom} et vaincu"
     # - Renvoie le nom et "vaincu" si la personne a été vaincue
+    end
   end
 
-def attaque(personne)
+  def attaque(personne)
     # A faire:
     # - Fait subir des dégats à la personne passée en paramètre
     # - Affiche ce qu'il s'est passé
