@@ -91,7 +91,7 @@ class Ennemi < Personne
     # A faire:
     # - Calculer les dégats
       # Les dégâts correspondent à 25% des points de vie
-      degats = self.points_de_vie * 0.25
+      degats = self.points_de_vie * 0.10
       return degats
   end
 end
@@ -134,21 +134,22 @@ class Jeu
 end
  
 class Monde
-    attr_accessor :ennemis, :ennemis_en_vie
+    attr_accessor :ennemis, :ennemiss_en_vie#chez changer le nom
     def initialize
         @ennemis = []
-        @ennemis_en_vie = []
+        @ennemiss_en_vie = []#chez changer le nom
     end
      
   def ennemis_en_vie
-    # A faire:
-    # - Ne retourner que les ennemis en vie
-      monde.ennemis.each do |ennemi|
-          if ennemi.en_vie == true
-              ennemis_en_vie << ennemi
+    # creation d'un tableau vide où seront stockés les ennemis en vie
+    # on boucle sur le tableau des ennemis
+    @ennemis.each do |ennemi|
+         if ennemi.en_vie == true
+              ennemiss_en_vie << ennemi#chez changer le nom
           end
-          return self.ennemis_en_vie
-      end
+          return self.ennemiss_en_vie#chez changer le nom
+          #J'ai suprimer cette ligne
+    end
   end
 end
  
